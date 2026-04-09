@@ -1,6 +1,6 @@
 # ICP M70 Reward Simulator
 
-An interactive simulator for exploring voting reward parameter changes under the [Mission 70](https://internetcomputer.org/whitepapers/mission70.pdf) proposal for the Internet Computer Protocol.
+An interactive simulator for exploring voting reward parameter changes under the [Mission 70](https://internetcomputer.org/whitepapers/mission70.pdf) proposal for the Internet Computer Protocol. The main purpose is to illustrate how the inflation reduction for a chosen set of parameters, as defined in the whitepaper, is computed.
 
 **Live app:** https://fe5jc-aaaaa-aaaam-aivbq-cai.icp0.io/
 
