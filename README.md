@@ -8,7 +8,7 @@ An interactive simulator for exploring voting reward parameter changes under the
 
 The simulator lets you adjust proposed governance parameters and immediately see:
 
-- **Inflation reduction (%):** how much total voting rewards shrink relative to the current scheme
+- **Inflation reduction (%):** how much total voting reward payouts shrink compared to the current scheme, holding the neuron population constant
 - **Max neuron APY:** the annualized yield for a neuron locked at maximum dissolve delay (no age bonus)
 - **Max neuron APY with 8-year bonus:** same, for neurons with exactly 8 years dissolve delay
 
@@ -40,10 +40,3 @@ dfx deploy
 # Open the printed local URL
 ```
 
-## Updating neuron data
-
-```bash
-# Place updated pickle in data/ then:
-python3 scripts/convert_data.py
-dfx deploy --network ic --identity m70-rewards-simulation
-```
