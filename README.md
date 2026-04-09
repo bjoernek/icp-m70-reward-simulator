@@ -8,7 +8,7 @@ An interactive simulator for exploring voting reward parameter changes under the
 
 The simulator lets you adjust proposed governance parameters and immediately see:
 
-- **Inflation reduction (%):** how much total voting reward payouts shrink compared to the current scheme, holding the neuron population constant
+- **Inflation reduction (%):** how much the total voting reward amount shrinks compared to the current scheme, holding the neuron population constant
 - **Max neuron APY:** the annualized yield for a neuron locked at maximum dissolve delay (no age bonus)
 - **Max neuron APY with 8-year bonus:** same, for neurons with exactly 8 years dissolve delay
 
@@ -23,6 +23,8 @@ The simulator lets you adjust proposed governance parameters and immediately see
 | 8-year commitment bonus | Extra multiplier for neurons locked at exactly 8 years |
 
 The bonus curve is `f(x) = a * x^n + min_bonus`, capped at max dissolve delay.
+
+For further information see the [Mission 70 whitepaper](https://internetcomputer.org/whitepapers/mission70.pdf).
 
 Inflation reduction is computed relative to the current scheme, normalized so that neurons at max delay earn the same base reward rate.
 
