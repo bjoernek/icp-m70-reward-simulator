@@ -1,0 +1,5 @@
+data/*.pkl
+__pycache__/
+*.pyc
+.dfx/
+src/frontend/favicon.png

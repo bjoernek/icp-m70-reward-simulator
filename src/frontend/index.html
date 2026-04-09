@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting Rewards Scenario Explorer</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h1>Voting Rewards Scenario Explorer</h1>
+
+    <h2>Parameters</h2>
+
+    <div class="control-group">
+      <label>Max dissolve delay (years) <span class="value-display" id="maxDelayValue">2</span></label>
+      <input type="range" id="maxDelay" min="1" max="8" step="1" value="2">
+    </div>
+
+    <div class="control-group">
+      <label>Min dissolve delay (months) <span class="value-display" id="minDelayValue">0.5</span></label>
+      <input type="range" id="minDelay" min="0.5" max="6" step="0.5" value="0.5">
+    </div>
+
+    <div class="control-group">
+      <label>Max bonus</label>
+      <select id="maxBonus">
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label>Convexity n</label>
+      <select id="convexityN">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+
+    <hr>
+    <h2>Additional Bonuses</h2>
+
+    <div class="control-group">
+      <label>8-year commitment bonus</label>
+      <select id="eightYearBonus">
+        <option value="1.0">1.0</option>
+        <option value="1.1" selected>1.1</option>
+        <option value="1.2">1.2</option>
+        <option value="1.3">1.3</option>
+      </select>
+    </div>
+
+    <hr>
+    <div class="metadata">
+      <h2>Data</h2>
+      <p>Neuron data as of 2026-04-08</p>
+      <p>Total supply: 550,776,194 ICP</p>
+      <p>Reward rate: 5.75%</p>
+      <p style="margin-top: 8px;">For further information see the <a href="https://internetcomputer.org/whitepapers/mission70.pdf" target="_blank" rel="noopener">Mission 70 whitepaper</a>.</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-label">Inflation reduction (%)</div>
+        <div class="metric-value" id="inflationMetric">--</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Max APY (no age bonus)</div>
+        <div class="metric-value" id="maxApyMetric">--</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Max APY (no age bonus, with 8y bonus)</div>
+        <div class="metric-value" id="maxApy8yMetric">--</div>
+      </div>
+    </div>
+
+    <div class="chart-row">
+      <div class="chart-container small">
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="apyChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-row">
+      <div class="chart-container" style="max-width: 50%;">
+        <canvas id="bonusChart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <script src="lib/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
