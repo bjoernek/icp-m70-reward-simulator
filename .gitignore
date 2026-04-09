@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .dfx/
 src/frontend/favicon.png
+.env
+CLAUDE.md
